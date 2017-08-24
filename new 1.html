@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script>
+function clickCounter() {
+
+
+	if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "0";
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	alert(sessionStorage.selectedCategoryID)
+
+
+document.getElementById("categoryNameLabel").innerHTML = sessionStorage.selectedCategoryID;
+
+}
+</script>
+<style>
+
+.modal-dialog{
+background-color:grey;
+}
+
+
+</style>
+</head>
+<body>
+
+<div data-toggle="modal" data-target="#myModal" style="background:pink; height:50px; width:150px; margin:100px;" onclick="clickCounter()"></div>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"> <!--Change Border to 0px--> 
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title" id="0"></h4></center>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the modal.</p>
+        </div>
+        <div class="modal-footer"> <!--Change Border to 0px--> 
+          <center><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></center>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+</body>
+</html>

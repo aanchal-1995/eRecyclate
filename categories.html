@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>CATEGORIES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script href="js/jquery.min.js"></script>
+  <script href="js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+  function categoryZeroClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "0";
+			sessionStorage.selectedCategoryTitle="SMARTPHONE"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	
+	document.getElementById("selectedCategoryID").innerHTML = sessionStorage.selectedCategoryTitle;
+	}
+	
+	function categoryOneClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "1";
+			sessionStorage.selectedCategoryTitle="TELEVISION"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	
+	document.getElementById("selectedCategoryID").innerHTML = sessionStorage.selectedCategoryTitle;
+	}
+									
+	function categoryTwoClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "2";
+			sessionStorage.selectedCategoryTitle="LAPTOP"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	
+	document.getElementById("selectedCategoryID").innerHTML = sessionStorage.selectedCategoryTitle;
+	}
+
+function categoryThreeClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "3";
+			sessionStorage.selectedCategoryTitle="WASHING MACHINE"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	
+	document.getElementById("selectedCategoryID").innerHTML = sessionStorage.selectedCategoryTitle;
+	}
+
+function categoryFourClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "4";
+			sessionStorage.selectedCategoryTitle="REFRIGERATOR"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	
+	document.getElementById("selectedCategoryID").innerHTML = sessionStorage.selectedCategoryTitle;
+	}
+
+function categoryFiveClickFunction() {
+  
+  if(typeof(Storage) !== "undefined") {
+            sessionStorage.selectedCategoryID = "5";
+			sessionStorage.selectedCategoryTitle="AIR CONDITIONER"
+    } else {
+       alert("Sorry, your browser does not support web storage...");
+    }
+
+	<!-- alert(sessionStorage.selectedCategoryID) -->
+	document.getElementById("selectedCategoryID").innerHTML=sessionStorage.selectedCategoryTitle;
+	}									
+	</script>        
+
+  <style>
+	
+	.logo{
+	font-family: 'Lato', sans-serif;
+	color:white;
+	background-color:black;
+	height:45px;
+	width:350px;
+	font-weight:bold;
+	margin-top:0px;
+	}
+	
+	.process-head{
+	text-align:center;
+	font-size:4em;
+	margin-top:5px;
+	color:white;
+	}
+	
+	.image{
+	margin-top:10px;
+	text-align:center;
+	height:230px;
+	cursor:pointer;
+	
+	}
+	
+	
+	
+	.image img{
+	width:100px;
+	height:100px;
+	margin-top:50px;
+	}
+	
+	
+	.feature-heading{
+	font-size:55px;
+	font-weight:700;
+	margin-top:100px;
+	text-align:center;
+	}
+	
+	.feature-para{
+	font-size:20px;
+	font-weight:350px;
+	}
+	
+	.feature-subhead{
+	color:white;
+	font-size:20px;
+	font-weight:400;
+	}
+	
+	<!-- .dealBtn{
+	margin-top:25px;
+	border:1px solid transparent;
+	border-radius:5px;
+	width:120px;
+	height:45px;
+	font-weight:200;
+	background-color:#0baf6b;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+	margin-bottom: 70px;
+	outline:none;
+	} -->
+	
+	.modal-header{
+	border:0px;
+	}
+	
+	.modal-footer{
+	border:0px;
+	}
+	
+	
+	.brand{
+	width:200px;
+	background-color: transparent;
+	}
+	
+	.proceed-btn{
+	outline:none;
+	color:white;
+	background-color:#5e3a0c;
+	border:transparent;
+	width:100px;
+	height:20px;
+	}
+	
+	.modal-content{
+	 background-color: #fffacd;
+	}
+	
+	.btn-default{
+	background-color:#5e3a0c;
+	color:white;
+	border-color: #ccc;
+	}
+	
+	
+	
+	
+  
+  
+  </style>
+</head>
+<body  style="background-color:black">
+  
+	<!-- logo -->
+	<h2 class="logo">PROGENITOR CODERS</h2>
+	
+	
+	
+	
+	<!-- categories -->
+	<section>
+	
+	<div class="row">
+		<div class="col-lg-12">
+		<h1 class="process-head">Select a Category</h1>
+		</div>
+	</div>
+	
+	</section>
+	<section>
+<div class="container">
+
+	<div class="row">
+		
+	
+		<div class="col-md-4 image" data-toggle="modal" data-target="#myModal" id="0"  onclick="categoryZeroClickFunction()" style="background-color:#ffc100">
+		
+			<img src="smartphone.png">
+			<h3 class="feature-subhead">SMARTPHONE</h3>
+		</div>
+			
+		<div class="col-md-4 image" id="1" data-toggle="modal" data-target="#myModal" onclick="categoryOneClickFunction()" style="background-color:#4560aa">
+			<img src="desktop.png">
+			<h3 class="feature-subhead">TELEVISION</h3>
+		</div>
+		
+		
+		<div class="col-md-4 image" id="2" data-toggle="modal" data-target="#myModal" onclick="categoryTwoClickFunction()" style="background-color:#ff5a1d">
+			<img src="laptop.png">
+			<h3 class="feature-subhead">LAPTOP</h3>
+		</div>
+	</div>
+	
+	
+	<br><div class="row">
+		
+		<div class="col-md-4 image" id="3" data-toggle="modal" data-target="#myModal" onclick="categoryThreeClickFunction()" style="background-color:#77c8e7">
+			<img src="wm.png">
+			<h3 class="feature-subhead">WASHING MACHINE</h3>
+		</div>
+		
+		<div class="col-md-4 image" id="4" data-toggle="modal" data-target="#myModal" onclick="categoryFourClickFunction()" style="background-color:#7edb73">
+			<img src="refrigerator.png">
+			<h3 class="feature-subhead">REFRIGERATOR</h3>
+		</div>
+		
+		<div class="col-md-4 image" id="5" data-toggle="modal" data-target="#myModal" onclick="categoryFiveClickFunction()" style="background-color:#FFB833">
+			
+			<img src="ac.png">
+			<h3 class="feature-subhead">AIR CONDITIONER</h3>	
+		</div>
+	
+	</div>
+	
+	</div>
+	</div>
+</section>
+  <div class="modal fade" id="myModal" role="dialog">
+				<div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header"> <!--Change Border to 0px--> 
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <center><h4 class="modal-title" id="selectedCategoryID"></h4></center>
+        </div>
+        <div class="modal-body">
+		
+		<form>
+          <center><label class="myLabel">SELECT YOUR BRAND</label></center>
+			<center>
+			<select class="brand">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			</select>
+			</center>
+			
+			<br><br><center><label class="myLabel">SELECT YOUR MODEL</label></center>
+			<center>
+			<select class="brand">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			</select>
+			</center>
+		 </form> 
+        </div>
+        <div class="modal-footer">
+		
+			<center><button type="button" class="btn btn-default">Proceed</button></center>
+          <br><center><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></center>
+        </div>
+      </div>
+      
+    </div>
+	</div>
+	
+	
+  
+</body>
+</html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>e-WASTE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script href="js/jquery.min.js"></script>
+  <script href="js/bootstrap.min.js"></script>
+  
+  <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+  
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,300i,400,400i,600,700" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+ 
+  
+  <style>
+  
+  html, button, input, select, textarea { font-family: 'Open Sans', sans-serif; }
+body { margin: 0; font-family: 'Open Sans', sans-serif; }
+
+
+  
+	#bgVid{
+	 position:absolute;
+	 top:0px;
+	 left:0px;
+    min-width: 50%;
+    min-height: 50%;
+    height: 640px;
+    z-index: -100;
+    background-size:cover;
+	overflow:hidden;
+	}
+  
+	
+    .main {
+	background-size:cover;
+	width:100%;
+	
+	}
+	
+	.navbar-default{
+    position:absolute;
+    top:0px;
+    width:100%;
+    text-align:center;
+	background: rgba(0,0,0,.25);
+	height:60px;
+	}
+	
+	.nav.navbar-nav li{
+	display:inline-block;
+	padding:2px;
+	text-align:center;
+	margin-top:0px;
+	}
+	
+	body{
+	font-size:15px;
+	}
+	
+	.logo{
+	font-family: 'Lato', sans-serif;
+	color:white;
+	font-weight:bold;
+	}
+	
+	.middle-segment{
+	vertical-align:middle;
+	display:inline-block;
+	margin-top:250px;
+	margin-left:auto;
+	text-align:center;
+    position:relative;
+	color:white;
+    }
+
+	.readBtn{
+	border:1px solid transparent;
+	border-radius:5px;
+	width:120px;
+	height:60px;
+	font-weight:100;;
+	background-color:#0baf6b;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+	outline:none;
+	margin-top:30px;
+	}
+	
+	.readBtn:active{
+	background-color:white;
+	color:#0baf6b;
+	}
+	
+	.readBtn a{
+	color:white;
+	text-decoration:none;
+	}
+	
+	.main h1{
+	color:white;
+	text-align:center;
+	padding:15px;
+	font-size:60px;
+	}
+	
+	.main p{
+	color:white;
+	padding:15px;
+	font-size:50px;
+	
+	}
+	
+	ul.nav.navbar-nav a{
+	color:white;
+	font-weight:150;
+	font-size:18px;
+	margin-top:0px;
+	}
+	
+	ul.nav.navbar-nav a:visited{
+	color:white;
+	}
+	
+	ul.nav.navbar-nav a:hover{
+	color:#0baf6b;
+	}
+	
+	ul.nav.navbar-nav a:focus{
+	color:#0baf6b;
+	}
+	
+	
+	.readBtn.btn-outline{
+	outline:none;
+	}
+	
+	.startBtn.btn-outline{
+	outline:none;
+	}
+	
+	.navbar-toggle{
+	background-color:#FF8C69;
+	}
+	
+	ul.nav.navbar-nav {
+	margin-right:5px; 
+	}
+	
+	.right-nav{
+	margin-right:0px;
+	float:right;
+	top:0px;
+	}
+	
+	.logo{
+	height:80px;
+	margin-left:10px;
+	float:left;
+	}
+	
+	
+	.startBtn{
+	border:1px solid transparent;
+	border-radius:5px;
+	width:120px;
+	height:45px;
+	margin-top: 30px;
+	font-weight:200;
+	background-color:#0baf6b;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	outline:none;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+	}
+	
+	.startBtn:active{
+	background-color:white;
+	color:#0baf6b;
+	outline:transparent;
+	}
+	
+	
+	.main-text{
+	height:350px;
+	text-align:center;
+	
+	}
+	
+	.main-heading{
+	font-size:2em;
+	margin-top:20px;
+	}
+	
+	.main-para{
+	font-size:15px;
+	line-height: 1.95;
+	margin-left:65px;
+	margin-right:65px;
+	text-align:center;
+	margin-top:25px;
+	}
+	
+	.main-heading h2{
+	font-size:20px;
+	}
+	
+	.icon{
+	width:120px;
+	height:120px;
+	text-align:center;
+	color:#0baf6b;
+	margin-top:35px;
+	}
+	
+	
+	 .services{
+	height:720px;
+	margin-top:0px;
+	} 
+	
+	.service-heading{
+	font-size:3.0em;
+	font-weight:600;
+	margin-top:100px;
+	color:white;
+	}
+	
+	.service-para{
+	font-size:20px;
+	font-weight:200;
+	padding-bottom:50px;
+	font-style:italic;
+	color:#777;
+	
+	}
+	
+	.feature-heading{
+	font-size:3em;
+	font-weight:600;
+	margin-top:60px;
+	text-align:center;
+	color:white;
+	}
+	
+	.feature-para{
+	font-size:20px;
+	font-weight:350px;
+	color:white;
+	}
+	
+	.select{
+	width:25px;
+	height:25px;
+	}
+	
+	.feature-subhead{
+	color:white;
+	font-size:20px;
+	font-weight:400;
+	}
+	
+	.img-services{
+	width:65px;
+	height:55px;
+	}
+	
+	.dealBtn{
+	margin-top:80px;
+	border:1px solid transparent;
+	border-radius:5px;
+	width:120px;
+	height:45px;
+	font-weight:200;
+	background-color:#0baf6b;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+	margin-bottom: 70px;
+	outline:none;
+	}
+	
+	.work-content{
+	margin-top:70px;
+	height:400px;
+	}
+	
+	.par{
+	height:100px;
+	}
+	
+	.contact{
+	background-color: rgba(0, 0, 0, 0.92);
+    height: 360px;
+<!-- 	margin-top:100px; -->
+	}
+	
+	
+	.icons{
+	height:80px;
+	color:black;
+	background:rgba(128, 128, 128, 0.16);
+	border-radius:30px;
+	width:430px;
+	<!-- margin-top:180px; -->
+	}
+	
+	.fa.divGlyph:hover{
+	color:#0baf6b;
+	}
+	
+	.glyph{
+	display:inline-block;
+	text-align:center;
+	margin-top:20px;
+	margin-left:10px;
+	}
+	
+	.fa.divGlyph{
+	font-size:35px;
+	width:50px;
+	height:50px;
+	color: black;
+	}
+	
+	.form-control{
+	height:50px;
+	border:2px solid #6d6262;
+	color:grey;
+	font-size:17 px;
+	}
+	
+	.contact-us{
+	background-color:black;
+	}	
+	.contact-us-head{
+	font-weight:600;
+	font-size:3em;
+	color:#3cd797;
+	margin-top:100px;
+	}
+	
+	.contact-us-para{
+	font-weight:350;
+	font-size:20px;
+	color:#3cd797;;
+	}
+	
+	.dealBtn:active{
+	background-color:white;
+	color:#0baf6b;
+	outline:none;
+	}
+	
+	.send-msg-btn button{
+	border:1px solid transparent;
+	border-radius:5px;
+	width:220px;
+	height:45px;
+	font-weight:200;
+	background-color:#0baf6b;
+	color:white;
+	text-align:center;
+	vertical-align:middle;
+	cursor:pointer;
+	box-shadow:0px 1px 2px rgba(0,0,0,0.3);
+	margin-bottom: 70px;
+	outline:none;
+	}
+	
+	.work-head{
+	text-align:center;
+	margin-top:20px;
+	color:white;
+	}
+	
+	.work-para{
+	text-align:center;
+	margin-top:20px;
+	color:white;
+	}
+	
+	@media screen and (max-width:892px){
+	.navbar-right{
+	float:right!important;
+	margin-right:-15px;
+	}
+	}
+	
+	
+  </style>
+</head>
+<body>
+
+<div class="main" id="myHome">
+
+<!-- navbar -->
+	<nav class="nav navbar-default right-nav">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navCollapse">
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+			</div>
+		</div>
+		
+			<!-- logo -->
+			<h2 class="logo">PROGENITOR CODERS</h2>
+			
+			<!-- video -->
+			<video autoplay muted loop id="bgVid">
+			<source src="bgvideo2.mp4" type="video/mp4">
+			</video>	
+		
+		<div class="container" style=" margin-right:0px;">
+			<div class="collapse navbar-collapse" id="navCollapse">
+				<ul class="nav navbar-nav right-nav">
+					<li><a href="#myHome">HOME</a></li>
+					<li><a href="#myServices">SERVICES</a></li>
+					<li><a href="#theWork">HOW IT WORKS</a></li>
+					<li><a href="#myContact">CONTACT</a></li>
+					<li style="border-left:1px solid white"><a href="login_signIn.html">LOGIN &nbsp SIGN UP</a></li>
+				</ul>
+			</div>
+		</div>  		
+	</nav>
+</div>
+
+	
+<center>	
+<!-- page center-->
+    <div class="middle-segment">
+	
+		<header>
+		<!-- text -->
+			<h1 style="font-size:4.5em">e-RECYCLATE</h1>
+			<p style="font-size:3em; margin-top:20px;">Earn As You Throw It Away!!</p>
+		</header>
+		
+		<footer>
+		<!-- button -->
+			<button type="button" class="readBtn btn-outline"><a href="#myServices">READ MORE</a></button>
+		</footer>
+		
+	</div>
+</center>
+
+<br>
+<!-- services -->
+<section class="services" id="myServices" style="background-color:black; margin-top:50px;">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+			<center>
+				<h1 class="service-heading">Services</h1>
+				<p class="service-para">We strive for innovation and precision.</p>
+			</center>
+			</div>
+		</div>
+	</div>
+	
+		<div class="row">
+			<div class="col-md-6 main-text"   style="background-color:#f4ef7a">
+			<center>
+				<img src="get-money.png" class="icon">
+				<h3 class="main-heading" style="color:#bfa107">Sell It</h3>
+				<p class="main-para">You can sell your selected product to us. After giving the required details, hand over the product to us and get the cash in return.</p>
+			</center>
+			</div>
+			
+			<div class="col-md-6 main-text"  style="background-color:#a2c4ea">
+			<center>
+				<img src="exchange.png" class="icon">
+				<h3 class="main-heading" style="color:#2469b6">Smart Exchange</h3>
+				<p class="main-para">We follow the "Buy One, Recycle One" concept. It is an innovative solution where you get credit for exchanging the old product while purchasing any electronic device from our partners.</p>
+			</center>
+			</div>
+		</div>
+
+
+<!-- how it works -->
+</section>
+
+<section style="background-color:black">
+	<div class="container working" id="theWork" style="background-color:black">
+		<div class="row">
+			<div class="col-lg-12">
+			<center>
+				<h1 class="feature-heading">How It Works</h1>
+				<p class="feature-para">Sell Your Used Electronic Appliances For Cash</p>
+			</center>
+			</div>
+		</div>
+	</div>
+	
+	
+
+
+	<div class="container">
+		<div class="work-content">
+			<div class="row">
+				<div class="col-md-3">
+					<center>
+					<div>
+						<img src="devices.png" class="icon">
+					</div>
+					
+					<div  class="par">
+						<h4 class="work-head">SELECT A GADGET</h4>
+						<p class="work-para">Tell us about the category of your product.</p>
+					
+					</div>
+					
+					</center>
+				</div>
+					
+				<div class="col-md-3">
+					<center>
+					<div>
+						<img src="tap.png" class="icon">
+					</div>
+					
+					<div  class="par">
+						<h4 class="work-head">CHOOSE THE BRAND AND MODEL</h4>
+						<p class="work-para">Give us the specifications of the product's brand and model.</p>
+					</div>
+					
+					</center>
+				</div>
+				
+				<div class="col-md-3">
+					<center>
+					<div>
+						<img src="checked.png" class="icon">
+					</div>
+					
+					<div  class="par">
+						<h4 class="work-head">CONFIRM ADDRESS</h4>
+						<p class="work-para">Verify and approve your address for the pickup.</p>
+					</div>
+					
+					</center>
+				</div>
+				
+				<div class="col-md-3">
+					<center>
+					<div>
+						<img src="delivery-truck.png" class="icon">
+					</div>
+					
+					<div class="par">
+						<h4 class="work-head">PICKUP</h4>
+						<p class="work-para">Get doorstep pickup from our partners.</p>
+					</div>
+					
+					</center>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+
+</section>
+ 
+<!-- devices 
+	<div class="row">
+	
+		<div class="col-md-2 image" style="background-color:#ffc100">
+			<img src="mob.png">
+			<h3 class="feature-subhead">SMARTPHONE</h3>
+		</div>
+	
+	
+		<div class="col-md-2 image" style="background-color:#4560aa">
+			<img src="tv.png">
+			<h3 class="feature-subhead">TELEVISION</h3>
+		</div>
+		
+		<div class="col-md-2 ac" style="background-color:#cbbd82">
+			<center>
+			<img src="ac.png">
+			<h3 class="feature-subhead">AIR CONDITIONER</h3>
+			</center>
+		</div>
+		
+		<div class="col-md-2 image" style="background-color:#f54949">
+			<img src="rg1.png">
+			<h3 class="feature-subhead">REFRIGERATOR</h3>
+		</div>
+		
+		<div class="col-md-2 image" style="background-color:#673e76">
+			<img src="washing-machine.png">
+			<h3 class="feature-subhead">WASHING MACHINE</h3>
+		</div>
+		
+		<div class="col-md-2 image" style="background-color:#ff6700">
+			<img src="laptop.png">
+			<h3 class="feature-subhead">LAPTOP</h3>
+		</div>
+	
+		<center>
+			<button type="button" class="dealBtn btn-outline">Get The Deal</button>
+		</center>
+	
+	</div>
+</section>
+-->
+
+
+<!-- contact -->
+ <section class="contact-us" id="myContact">
+	<div class="row">
+	
+	<div class="col-lg-12">
+		<center>
+		<h2 class="contact-us-head">Contact Us</h2>
+		<p class="contact-us-para">Contact us to seal the deal with us.</p>
+		</center>
+	</div>
+	
+	<div class="row">
+	
+		<div class="col-md-4 col-md-offset-4 col-xs-12">
+			<div>	
+					
+					<div class="form-group">
+						<input type="text" class="form-control"  placeholder="Name...">
+						<br><input type="text" class="form-control"  placeholder="Email...">
+						<br><input type="text" class="form-control"  placeholder="Subject...">
+						<br><textarea type="text" class="form-control" rows="6" placeholder="Message..."></textarea>
+					</div>
+			</div>
+		</div>
+	</div>
+	</div>
+				<center>
+				
+				<div class="send-msg-btn">	
+					<button type="submit">SEND MESSAGE</button>
+				</div>
+				</center>
+		 	
+		
+
+</section>
+	 
+
+<section class="contact">
+	
+	<center>	
+	<!-- glyphicons -->
+		<div class="icons">
+			
+			<a href="#"><i class="fa fa-twitter glyph divGlyph" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-facebook glyph divGlyph" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-google-plus-official glyph divGlyph" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-pinterest-p glyph divGlyph" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-dribbble glyph divGlyph" aria-hidden="true"></i></a>
+			<a href="#"><i class="fa fa-linkedin glyph divGlyph" aria-hidden="true"></i></a>
+		
+		</div>	
+	</center>	
+</section>
+
+<script src="js/jquery-1.8.3.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 2000);
+       return false;
+      }
+    }
+  });
+  
+   
+});
+</script>
+</body>
+</html>
